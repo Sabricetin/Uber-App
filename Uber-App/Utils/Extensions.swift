@@ -8,9 +8,23 @@
 import Foundation
 import UIKit
 
+
+extension UIColor {
+    static func rgb(red: CGFloat , green : CGFloat , blue: CGFloat) -> UIColor {
+        return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
+        
+    }
+    static let backgroundColor = UIColor.rgb(red: 25, green: 25, blue: 25)
+    static let mainBlueTint = UIColor.rgb(red: 17, green: 154, blue: 237)
+    static let outlineStrokeColor = UIColor.rgb(red: 234, green: 46, blue: 111)
+    static let trackStrokeColor = UIColor.rgb(red: 56, green: 25, blue: 49)
+    static let pulsatingFillColor = UIColor.rgb(red: 86, green: 30, blue: 63)
+    
+}
+
 extension UIView {
     
-    func inputContenierView(image: UIImage , textfield: UITextField? = nil , segmentControl: UISegmentedControl? = nil) -> UIView {
+    func inputContenierView(image: UIImage , textField: UITextField? = nil , segmentControl: UISegmentedControl? = nil) -> UIView {
         let view     = UIView()
         
         let imageView = UIImageView()
@@ -18,7 +32,7 @@ extension UIView {
         imageView.alpha = 0.87
         view.addSubview(imageView)
         
-        if let textfield = textfield {
+        if let textfield = textField {
             
             imageView.centerY(inview: view)
             imageView.anchor(left: view.leftAnchor , paddingLeft: 8 , width: 24 , height: 24)
@@ -56,6 +70,11 @@ extension UIView {
         }
     }
     
+    func centerX(inView view : UIView ) {
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
     func anchor ( 
         top: NSLayoutYAxisAnchor? = nil ,
         left: NSLayoutXAxisAnchor? = nil ,
@@ -73,19 +92,19 @@ extension UIView {
                 topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
             }
             if let left = left {
-                topAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
+                leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
             }
             if let bottom = bottom {
-                topAnchor.constraint(equalTo: bottom, constant: paddingBottom).isActive = true
+                bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
             }
             if let right = right {
-                topAnchor.constraint(equalTo: right, constant: paddingRight).isActive = true
+                rightAnchor.constraint(equalTo: right, constant: paddingRight).isActive = true
             }
             if let width = width {
-                topAnchor.constraint(equalTo: width).isActive = true
+                widthAnchor.constraint(equalToConstant: width).isActive = true
             }
             if let height = height {
-                topAnchor.constraint(equalTo: height).isActive = true
+                heightAnchor.constraint(equalToConstant: height).isActive = true
             }
         
     }
@@ -103,7 +122,7 @@ extension UITextField {
         tf.keyboardAppearance = .dark
         tf.isSecureTextEntry = isSecureTextEntry
         tf.attributedPlaceholder    = NSAttributedString(string: placeholder , attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        return tf   
+        return tf
         
     }
 }
