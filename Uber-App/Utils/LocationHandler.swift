@@ -21,15 +21,25 @@ class LocationHandler : NSObject , CLLocationManagerDelegate {
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() // İzin isteme
+        locationManager.startUpdatingLocation()         // Konum güncellemesi
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         
         let status = manager.authorizationStatus
         
-        if status == .authorizedWhenInUse {
-            locationManager.requestWhenInUseAuthorization()
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        } else {
+            print("Konum izni rededildi")
         }
         
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        guard let newLocation = locations.last else { return }
+        self.location = newLocation // Son konumunu kaydet
     }
 }

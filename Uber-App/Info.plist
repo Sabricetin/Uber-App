@@ -19,5 +19,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Etraftaki sürücüleri görmek için lütfen konumuza izin verin </string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Etraftaki sürücüleri görmek için lütfen konumuza izin verin </string>
 </dict>
 </plist>

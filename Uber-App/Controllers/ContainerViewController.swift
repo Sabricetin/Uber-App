@@ -23,8 +23,8 @@ class ContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkIfUserIsLoggedIn()
-        
+     //   checkIfUserIsLoggedIn()
+       presentLoginController()
         
     }
     
@@ -33,7 +33,8 @@ class ContainerViewController: UIViewController {
         if Auth.auth().currentUser?.uid == nil {
             presentLoginController()
         } else {
-            configure() 
+            configure()
+            
         }
         
         
