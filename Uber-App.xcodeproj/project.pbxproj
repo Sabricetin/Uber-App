@@ -24,6 +24,8 @@
 		1EB866F92D8A2A58000EB38F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB866F82D8A2A58000EB38F /* HomeViewController.swift */; };
 		1EB866FC2D8ACE86000EB38F /* GeoFire in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB866FB2D8ACE86000EB38F /* GeoFire */; };
 		1EB866FE2D8ACE86000EB38F /* GeoFireUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB866FD2D8ACE86000EB38F /* GeoFireUtils */; };
+		1EC450692D8DB8180023A07F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC450682D8DB8180023A07F /* Service.swift */; };
+		1EC4506B2D8DBA820023A07F /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4506A2D8DBA820023A07F /* LocationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		1E1F254D2D89CB8100D57ECE /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		1EB866F62D8A29ED000EB38F /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		1EB866F82D8A2A58000EB38F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1EC450682D8DB8180023A07F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1EC4506A2D8DBA820023A07F /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		1E1F25442D89BF4800D57ECE /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1EC450682D8DB8180023A07F /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1F254B2D89C1BC00D57ECE /* Extensions.swift */,
+				1EC4506A2D8DBA820023A07F /* LocationHandler.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -232,6 +238,8 @@
 				1EB866F72D8A29ED000EB38F /* ContainerViewController.swift in Sources */,
 				1E1F254C2D89C1BC00D57ECE /* Extensions.swift in Sources */,
 				1EB866F92D8A2A58000EB38F /* HomeViewController.swift in Sources */,
+				1EC4506B2D8DBA820023A07F /* LocationHandler.swift in Sources */,
+				1EC450692D8DB8180023A07F /* Service.swift in Sources */,
 				1E1F25162D89B81900D57ECE /* AppDelegate.swift in Sources */,
 				1E1F25182D89B81900D57ECE /* SceneDelegate.swift in Sources */,
 				1E1F254A2D89C04600D57ECE /* SignUpViewController.swift in Sources */,
