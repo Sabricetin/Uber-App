@@ -90,10 +90,19 @@ class LoginViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { authDataResult , error in
             if let error = error  {
-                print("Giriş yaparken bir hata oluştu")
+                print("Giriş yaparken bir hata oluştu\(error.localizedDescription)")
                 return
             }
-            guard let controller = UIApplication.shared.keyWindow?.rootViewController   as? ContainerViewController else { return}
+            
+            if let windowScene =
+                UIApplication.shared.connectedScenes.first as?
+                UIWindowScene , let window = windowScene.windows.first ,
+               let controller = window.rootViewController   as?
+                ContainerController {
+                controller.configure()
+
+            }
+            
             self.dismiss(animated: true)
         }
     }

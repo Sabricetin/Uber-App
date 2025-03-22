@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     
     var user: User? {
         didSet {
-            
+            //Fonksiyonları çağır 
         }
     }
 

@@ -138,7 +138,7 @@ class SignUpViewController: UIViewController {
       
       func uploadUserDataAndShowHomeController(uid: String, values: [String: Any]) {
           REF_USERS.child(uid).updateChildValues(values, withCompletionBlock: { (error, databaseReference) in
-              guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ContainerViewController else { return }
+              guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ContainerController else { return }
               controller.configure()
               self.dismiss(animated: true, completion: nil)
           })
@@ -150,7 +150,7 @@ class SignUpViewController: UIViewController {
           view.addSubview(titleLabel)
           titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
           titleLabel.centerX(inView: view)
-          
+        
           let stack = UIStackView(arrangedSubviews: [emailContainerView,
                                                      fullnameContainerView,
                                                      passwordContainerView,

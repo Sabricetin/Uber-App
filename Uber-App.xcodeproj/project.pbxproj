@@ -26,6 +26,9 @@
 		1EB866FE2D8ACE86000EB38F /* GeoFireUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB866FD2D8ACE86000EB38F /* GeoFireUtils */; };
 		1EC450692D8DB8180023A07F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC450682D8DB8180023A07F /* Service.swift */; };
 		1EC4506B2D8DBA820023A07F /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4506A2D8DBA820023A07F /* LocationHandler.swift */; };
+		1EC4506E2D8EB0D30023A07F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4506D2D8EB0D30023A07F /* MenuViewController.swift */; };
+		1EC450712D8EB2A40023A07F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC450702D8EB2A40023A07F /* User.swift */; };
+		1EC450732D8EB8DB0023A07F /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC450722D8EB8DB0023A07F /* MenuHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		1EB866F82D8A2A58000EB38F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1EC450682D8DB8180023A07F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		1EC4506A2D8DBA820023A07F /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		1EC4506D2D8EB0D30023A07F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1EC450702D8EB2A40023A07F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1EC450722D8EB8DB0023A07F /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		1E1F25412D89BF2300D57ECE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1EC450702D8EB2A40023A07F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1F254D2D89CB8100D57ECE /* AuthButton.swift */,
+				1EC450722D8EB8DB0023A07F /* MenuHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 		1E1F25432D89BF3E00D57ECE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1EC4506C2D8EB0A10023A07F /* SideMenu */,
 				1E1F25462D89BFE500D57ECE /* Authentication */,
 				1EB866F62D8A29ED000EB38F /* ContainerViewController.swift */,
 				1EB866F82D8A2A58000EB38F /* HomeViewController.swift */,
@@ -145,6 +154,14 @@
 				1E1F25492D89C04600D57ECE /* SignUpViewController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		1EC4506C2D8EB0A10023A07F /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1EC4506D2D8EB0D30023A07F /* MenuViewController.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +254,12 @@
 				1E1F254E2D89CB8100D57ECE /* AuthButton.swift in Sources */,
 				1EB866F72D8A29ED000EB38F /* ContainerViewController.swift in Sources */,
 				1E1F254C2D89C1BC00D57ECE /* Extensions.swift in Sources */,
+				1EC4506E2D8EB0D30023A07F /* MenuViewController.swift in Sources */,
+				1EC450732D8EB8DB0023A07F /* MenuHeader.swift in Sources */,
 				1EB866F92D8A2A58000EB38F /* HomeViewController.swift in Sources */,
 				1EC4506B2D8DBA820023A07F /* LocationHandler.swift in Sources */,
 				1EC450692D8DB8180023A07F /* Service.swift in Sources */,
+				1EC450712D8EB2A40023A07F /* User.swift in Sources */,
 				1E1F25162D89B81900D57ECE /* AppDelegate.swift in Sources */,
 				1E1F25182D89B81900D57ECE /* SceneDelegate.swift in Sources */,
 				1E1F254A2D89C04600D57ECE /* SignUpViewController.swift in Sources */,
